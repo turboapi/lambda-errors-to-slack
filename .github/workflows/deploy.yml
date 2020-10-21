@@ -1,0 +1,22 @@
+name: CD
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: Build
+        run: npm install
+      - name: Install serverless
+        run: npm i -g serverless
+      - name: Deploy
+        run: sls deploy -s prod -r us-east-1
