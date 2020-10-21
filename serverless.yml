@@ -42,7 +42,7 @@ functions:
   alerter:
     handler: alerter/index.main
     environment:
-      SLACK_WEBHOOK_URL: TC090E8U8/B01AVHXC5PS/KjnGPHKyYEyjBN4UscG4FjDN
+      SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL}
 
 resources:
   Resources:
