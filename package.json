@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.7.2"
+    "bluebird": "^3.7.2",
+    "serverless-iam-roles-per-function": "2.0.2"
   },
   "devDependencies": {
     "serverless-bundle": "^1.2.5",
